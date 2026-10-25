@@ -1,0 +1,122 @@
+/* Paleta oficial del cliente. El negro (--ink) se reserva solo para texto de cuerpo. */
+:root{
+  --terra:#BE410A;
+  --beige:#E4CFB1;
+  --celeste:#48C2ED;
+  --ink:#2A1608;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  max-width:390px;
+  margin:0 auto;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--beige);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* PRIMERA PARTE: HERO EN BEIGE */
+.hero{
+  padding:36px 24px 44px;
+  text-align:center;
+}
+.hero .logo{display:block;width:260px;max-width:100%;margin:0 auto}
+.badge{
+  display:inline-block;margin-top:22px;
+  background:var(--terra);color:#fff;
+  font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 14px;border-radius:999px;
+}
+h1{
+  font-size:36px;font-weight:900;line-height:1.02;letter-spacing:-.02em;
+  margin-top:18px;color:var(--terra);
+}
+.subtitle{
+  margin:12px auto 0;max-width:300px;
+  font-size:18px;font-weight:600;line-height:1.35;color:var(--terra);
+}
+.lead{margin:12px auto 0;max-width:300px;font-size:16px;line-height:1.45;color:var(--ink)}
+.btn{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;margin-top:22px;
+  background:var(--terra);color:#fff;
+  font-size:17px;font-weight:700;
+  padding:16px 18px;border-radius:14px;text-decoration:none;
+  box-shadow:0 6px 0 #7A2804;
+}
+.btn.ghost{
+  background:transparent;color:var(--terra);
+  border:2px solid var(--terra);box-shadow:none;margin-top:12px;
+}
+
+/* RESTO DE LA PÁGINA (pendiente de revisar con la misma regla de color) */
+.photo-img{display:block;width:calc(100% - 40px);margin:0 20px;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:20px}
+.photo{
+  margin:0 20px;height:190px;border-radius:20px;
+  background:var(--celeste);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:600;color:var(--ink);text-align:center;
+  border:2px dashed rgba(42,22,8,.35);
+}
+.info{
+  margin:20px 20px 0;
+  background:var(--celeste);border-radius:18px;padding:18px;
+  display:grid;grid-template-columns:auto 1fr;row-gap:12px;column-gap:14px;align-items:center;
+  font-size:15px;color:var(--ink);
+}
+.info .k{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra)}
+.info .v{font-weight:600}
+
+.section-title{font-size:28px;font-weight:900;color:var(--terra);margin:34px 20px 4px;letter-spacing:-.01em}
+.section-sub{margin:0 20px 14px;font-size:16px;font-weight:600;color:var(--terra)}
+.cards{display:flex;flex-direction:column;gap:12px;margin:0 20px}
+.card{display:flex;gap:14px;align-items:center;background:var(--celeste);border-radius:18px;padding:12px}
+.thumb img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
+.thumb{width:76px;height:76px;flex:0 0 76px;border-radius:14px;background:var(--beige);border:2px dashed rgba(42,22,8,.3)}
+.card h3{font-size:19px;font-weight:900;color:var(--terra)}
+.card p{font-size:13px;line-height:1.35;margin-top:3px;color:var(--ink)}
+.card .tag{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;background:var(--beige);padding:4px 9px;border-radius:999px;color:var(--ink)}
+
+.reserve{margin:34px 20px 0;background:var(--terra);color:#fff;border-radius:24px;padding:24px 20px;text-align:center}
+.reserve h2{font-size:26px;font-weight:900;line-height:1.1}
+.reserve p{font-size:15px;margin-top:8px}
+.reserve .btn{background:var(--celeste);color:var(--ink);box-shadow:0 6px 0 #2E8FB8;margin-top:18px}
+
+.loc{margin-top:34px}
+.loc .btn{margin:0 20px;width:calc(100% - 40px)}
+.ig{margin:14px 20px 0}
+.ig .btn.ghost{margin-top:0}
+footer{margin-top:34px;background:var(--celeste);color:var(--ink);padding:26px 20px 34px;text-align:center;font-size:13px;line-height:1.5}
+footer strong{font-size:18px;color:var(--terra);font-weight:900}
+
+/* Firma Tereré Estudio */
+.firma-te {
+  background: #161415;
+  padding: 14px 16px;
+  text-align: center;
+}
+.firma-te a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #F3E9DA;
+  text-decoration: none;
+  font: 500 14px/1 system-ui, sans-serif;
+}
+.firma-te img {
+  height: 28px;
+  width: auto;
+  opacity: 0.9;
+}
+.firma-te a:hover img,
+.firma-te a:focus-visible img {
+  opacity: 1;
+}
+.firma-te a:focus-visible {
+  outline: 2px solid #9FBD2B;
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .firma-te img { height: 24px; }
+}
