@@ -2,7 +2,7 @@
 
 ## 1. Medidas integradas en el código
 - **Sin JavaScript** en la página: no hay scripts, ni handlers inline (`onclick`, etc.), ni `innerHTML` ni `eval`.
-- **CSP estricta** sin `unsafe-inline`: el CSS está en `css/styles.css` y no quedan atributos `style=""`. Solo se permiten recursos propios y Google Fonts.
+- **CSP estricta** sin `unsafe-inline`: el CSS está en `css/styles.css` y no quedan atributos `style=""`. Solo se permiten recursos propios (la tipografía Inter está guardada en `fuentes/`).
 - **CSP también como `<meta>`** (respaldo si el hosting no envía cabeceras). `frame-ancestors`, HSTS y `X-Frame-Options` solo funcionan desde cabeceras del servidor.
 - **Enlaces externos:** el enlace a terereestudio.com.ar lleva `rel="noopener"`. Cuando se agreguen enlaces `target="_blank"`, deben llevar `rel="noopener noreferrer"`.
 - **Imágenes sin metadatos** (EXIF, GPS, dispositivo) y con peso reducido.
@@ -26,7 +26,7 @@
 - [COMPLETAR] Aviso legal y datos del responsable, si el cliente lo quiere publicar.
 
 ## 4. Riesgos residuales (en simple)
-- **Google Fonts** carga desde un tercero. No tiene SRI porque su CSS cambia dinámicamente. Solución definitiva: alojar la tipografía en el mismo sitio.
+- **Tipografía:** Inter está guardada en el mismo sitio (`fuentes/`, de Fontsource): ya no se carga nada desde Google.
 - **Mapas:** el botón "Cómo llegar" abre Google Maps en otra página, fuera del sitio. No hay iframe, por lo que no hay datos enviados a terceros al cargar la página.
 - **Imágenes de producto placeholder:** son generadas y deben reemplazarse por fotos reales antes de publicar.
 - **Sin formulario**, el riesgo de datos personales es nulo hoy. Cuando se agregue uno, aplicar la sección 6 del protocolo completa.
